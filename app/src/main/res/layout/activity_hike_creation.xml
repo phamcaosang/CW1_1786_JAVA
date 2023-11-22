@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Back button icon -->
+    <ImageView
+        android:id="@+id/backButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/baseline_keyboard_backspace"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:padding="8dp"/>
+
+    <!-- Save button -->
+    <TextView
+        android:id="@+id/saveButton"
+        android:layout_width="wrap_content"
+        android:layout_height="37dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginLeft="4dp"
+        android:padding="2dp"
+        android:text="NEW HIKE CREATION"
+        android:textStyle="bold"
+        android:textSize="20sp" />
+
+    <!-- Details fields -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/backButton"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TableLayout
+                android:id="@+id/detailsTable"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <!-- Name Field -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/nameTextInputLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/nameEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text"
+                        android:hint="Name" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- Location Field -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/locationTextInputLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/locationEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text"
+                        android:hint="Location" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- Date Field -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/dateTextInputLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/dateEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text"
+                        android:hint="Date (yyyy-MM-dd)" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- Parking Availability Field -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/parkingTextInputLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Parking Availability">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Parking Availability"
+                        android:layout_marginTop="20dp"
+                        android:textSize="16dp"/>
+
+                    <RadioGroup
+                        android:id="@+id/parkingRadioGroup"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/yesRadioButton"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Yes" />
+
+                        <RadioButton
+                            android:id="@+id/noRadioButton"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="No" />
+                    </RadioGroup>
+                </com.google.android.material.textfield.TextInputLayout>
+                <!-- Length Field -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/lengthTextInputLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/lengthEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text"
+                        android:hint="Length" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- Difficulty Field -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/difficultyTextInputLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/difficultyEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text"
+                        android:hint="Difficulty" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- Description Field -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/descriptionTextInputLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/descriptionEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textMultiLine"
+                        android:lines="3"
+                        android:hint="Description" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- Submit Button -->
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="16dp">
+
+                    <Button
+                        android:id="@+id/submitButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Submit"
+                        android:layout_gravity="center_horizontal" />
+                </TableRow>
+
+            </TableLayout>
+
+        </ScrollView>
+    </LinearLayout>
+
+</RelativeLayout>
